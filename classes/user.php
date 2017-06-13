@@ -52,7 +52,7 @@ class User extends Password{
 	
 	public function showLevelQuestions($level){
         try{
-        $stmt = $this->_db->prepare('SELECT * FROM artifact_instances_locale WHERE artifact_level_id = "1" AND artifact_cat = "faces"');
+        $stmt = $this->_db->prepare('SELECT * FROM artifact_instances_locale WHERE artifact_instance_id = "1" ');
         $stmt->execute();
 
 		    return $stmt->fetchAll();
